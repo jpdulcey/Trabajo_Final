@@ -1,0 +1,979 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Modelo predictivo para el bitcoin basado en dos variables con alto respaldo financiero. &#8212; My sample book</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Modelo predictivo para el bitcoin basado en dos variables con alto respaldo financiero." href="intro.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">My sample book</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Buscar este libro ..." aria-label="Buscar este libro ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Modelo predictivo para el bitcoin basado en dos variables con alto respaldo financiero.
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Modelo predictivo para el bitcoin basado en dos variables con alto respaldo financiero.
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Navegación de palanca" aria-controls="site-navigation"
+                title="Navegación de palanca" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Descarga esta pagina"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/notebooks.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Descargar archivo fuente" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimir en PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Repositorio de origen"><i
+                    class="fab fa-github"></i>repositorio</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fnotebooks.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Abrir un problema"><i class="fas fa-lightbulb"></i>Tema abierto</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modo de pantalla completa"
+        title="Modo de pantalla completa"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/notebooks.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Lanzamiento Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contenido
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#librerias">
+   1. Librerìas
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#base-de-datos">
+   2. Base de Datos
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#eliminar-columnas-que-no-se-requieren">
+     Eliminar Columnas que no se requieren
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#verificar-datos-faltantes">
+     Verificar datos faltantes
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#analisis-descriptivo">
+   Análisis Descriptivo
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#boxplot">
+     Boxplot
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#b-analisis-grafico">
+     b. Análisis Gráfico
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#c-descriptivo">
+     c. Descriptivo
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="modelo-predictivo-para-el-bitcoin-basado-en-dos-variables-con-alto-respaldo-financiero">
+<h1>Modelo predictivo para el bitcoin basado en dos variables con alto respaldo financiero.<a class="headerlink" href="#modelo-predictivo-para-el-bitcoin-basado-en-dos-variables-con-alto-respaldo-financiero" title="Permalink to this headline">¶</a></h1>
+<p>Las criptomonedas han iniciado una revolucion financiera comparada con la eliminación del patron oro en los años 40’, desde su
+lanzamiento en 2008 su valor se ha incrementado de forma importante hasta superar los 60 mil USD marcando un hito para la forma de
+respaldo de inversiones que se llevaban hasta ahora.
+Con el fin de establecer la incidencia en la principal criptomoneda, se desea evaluar la dependencia de los dos principales productos que
+respaldan las inversiones a nivel mundial (petróleo y oro) y evaluar si el crecimiento del bitcoin depende a la alta volatilidad de que han
+presentados los comodities en los últimos años.</p>
+<section id="librerias">
+<h2>1. Librerìas<a class="headerlink" href="#librerias" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">bokeh.io</span> <span class="kn">import</span> <span class="n">curdoc</span><span class="p">,</span> <span class="n">output_notebook</span>
+<span class="kn">from</span> <span class="nn">bokeh.models</span> <span class="kn">import</span> <span class="n">HoverTool</span><span class="p">,</span> <span class="n">ColumnDataSource</span><span class="p">,</span> <span class="n">CategoricalColorMapper</span><span class="p">,</span> <span class="n">Slider</span><span class="p">,</span> <span class="n">CustomJS</span>
+<span class="kn">from</span> <span class="nn">bokeh.palettes</span> <span class="kn">import</span> <span class="n">Spectral6</span>
+<span class="kn">from</span> <span class="nn">bokeh.layouts</span> <span class="kn">import</span> <span class="n">widgetbox</span><span class="p">,</span> <span class="n">row</span>
+<span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">interact</span>
+<span class="kn">from</span> <span class="nn">bokeh.io</span> <span class="kn">import</span> <span class="n">push_notebook</span><span class="p">,</span> <span class="n">show</span><span class="p">,</span> <span class="n">output_notebook</span>
+<span class="kn">from</span> <span class="nn">bokeh.layouts</span> <span class="kn">import</span> <span class="n">column</span>
+<span class="kn">from</span> <span class="nn">bokeh.plotting</span> <span class="kn">import</span> <span class="n">Figure</span><span class="p">,</span> <span class="n">output_file</span><span class="p">,</span> <span class="n">show</span>
+<span class="kn">import</span> <span class="nn">plotly.express</span> <span class="k">as</span> <span class="nn">px</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">altair</span> <span class="k">as</span> <span class="nn">alt</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="kn">from</span> <span class="nn">plotly.graph_objects</span> <span class="kn">import</span> <span class="n">Layout</span>
+<span class="kn">import</span> <span class="nn">plotly.graph_objects</span> <span class="k">as</span> <span class="nn">go</span>
+<span class="kn">import</span> <span class="nn">plotly.figure_factory</span> <span class="k">as</span> <span class="nn">ff</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+<span class="kn">import</span> <span class="nn">datetime</span>
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">MinMaxScaler</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="base-de-datos">
+<h2>2. Base de Datos<a class="headerlink" href="#base-de-datos" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/jpdulcey/Trabajo_Final/main/Consolidado.csv&#39;</span><span class="p">,</span> <span class="p">)</span>
+<span class="nb">round</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Date</th>
+      <th>Open_Bit</th>
+      <th>High_Bit</th>
+      <th>Low_Bit</th>
+      <th>Close_Bit</th>
+      <th>Adj Close_Bit</th>
+      <th>Volume_Bit</th>
+      <th>Open_WTI</th>
+      <th>High_WTI</th>
+      <th>Low_WTI</th>
+      <th>Close_WTI</th>
+      <th>Adj Close_WTI</th>
+      <th>Volume_WTI</th>
+      <th>Open_Gold</th>
+      <th>High_Gold</th>
+      <th>Low_Gold</th>
+      <th>Close_Gold</th>
+      <th>Adj Close_Gold</th>
+      <th>Volume_Gold</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2016-01-04</td>
+      <td>430.061005</td>
+      <td>434.516998</td>
+      <td>429.084015</td>
+      <td>433.091003</td>
+      <td>433.091003</td>
+      <td>38477500.0</td>
+      <td>2.44</td>
+      <td>2.56</td>
+      <td>2.27</td>
+      <td>2.37</td>
+      <td>2.37</td>
+      <td>1947800</td>
+      <td>1063.4</td>
+      <td>1082.5</td>
+      <td>1063.2</td>
+      <td>1075.1</td>
+      <td>1075.1</td>
+      <td>143.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2016-01-05</td>
+      <td>433.069000</td>
+      <td>434.182007</td>
+      <td>429.675995</td>
+      <td>431.959991</td>
+      <td>431.959991</td>
+      <td>34522600.0</td>
+      <td>2.33</td>
+      <td>2.35</td>
+      <td>2.13</td>
+      <td>2.21</td>
+      <td>2.21</td>
+      <td>1945700</td>
+      <td>1075.6</td>
+      <td>1081.5</td>
+      <td>1075.3</td>
+      <td>1078.4</td>
+      <td>1078.4</td>
+      <td>82.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2016-01-06</td>
+      <td>431.855988</td>
+      <td>431.855988</td>
+      <td>426.341003</td>
+      <td>429.105011</td>
+      <td>429.105011</td>
+      <td>34042500.0</td>
+      <td>2.14</td>
+      <td>2.16</td>
+      <td>2.10</td>
+      <td>2.12</td>
+      <td>2.12</td>
+      <td>763200</td>
+      <td>1081.6</td>
+      <td>1093.7</td>
+      <td>1081.6</td>
+      <td>1091.9</td>
+      <td>1091.9</td>
+      <td>52.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2016-01-07</td>
+      <td>430.010986</td>
+      <td>458.765991</td>
+      <td>429.076996</td>
+      <td>458.048004</td>
+      <td>458.048004</td>
+      <td>87562200.0</td>
+      <td>2.03</td>
+      <td>2.08</td>
+      <td>1.93</td>
+      <td>1.93</td>
+      <td>1.93</td>
+      <td>2068800</td>
+      <td>1091.6</td>
+      <td>1109.4</td>
+      <td>1091.6</td>
+      <td>1107.7</td>
+      <td>1107.7</td>
+      <td>122.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2016-01-08</td>
+      <td>457.537994</td>
+      <td>462.933990</td>
+      <td>447.937988</td>
+      <td>453.230011</td>
+      <td>453.230011</td>
+      <td>56993000.0</td>
+      <td>1.99</td>
+      <td>2.01</td>
+      <td>1.90</td>
+      <td>1.93</td>
+      <td>1.93</td>
+      <td>1940500</td>
+      <td>1111.1</td>
+      <td>1111.1</td>
+      <td>1093.0</td>
+      <td>1097.8</td>
+      <td>1097.8</td>
+      <td>98.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<section id="eliminar-columnas-que-no-se-requieren">
+<h3>Eliminar Columnas que no se requieren<a class="headerlink" href="#eliminar-columnas-que-no-se-requieren" title="Permalink to this headline">¶</a></h3>
+<p>Para el análisis de dependencia y pronóstico de los valores del Bitcoin, solo se utilizará los valores de apertura y cierre.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;Date&#39;, &#39;Open_Bit&#39;, &#39;High_Bit&#39;, &#39;Low_Bit&#39;, &#39;Close_Bit&#39;,
+       &#39;Adj Close_Bit&#39;, &#39;Volume_Bit&#39;, &#39;Open_WTI&#39;, &#39;High_WTI&#39;, &#39;Low_WTI&#39;,
+       &#39;Close_WTI&#39;, &#39;Adj Close_WTI&#39;, &#39;Volume_WTI&#39;, &#39;Open_Gold&#39;,
+       &#39;High_Gold&#39;, &#39;Low_Gold&#39;, &#39;Close_Gold&#39;, &#39;Adj Close_Gold&#39;,
+       &#39;Volume_Gold&#39;], dtype=object)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;Adj Close_Bit&#39;</span><span class="p">,</span> <span class="s1">&#39;Volume_Bit&#39;</span><span class="p">,</span> <span class="s1">&#39;Adj Close_WTI&#39;</span><span class="p">,</span> <span class="s1">&#39;Volume_WTI&#39;</span><span class="p">,</span><span class="s1">&#39;Adj Close_Gold&#39;</span><span class="p">,</span><span class="s1">&#39;Volume_Gold&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Date</th>
+      <th>Open_Bit</th>
+      <th>High_Bit</th>
+      <th>Low_Bit</th>
+      <th>Close_Bit</th>
+      <th>Open_WTI</th>
+      <th>High_WTI</th>
+      <th>Low_WTI</th>
+      <th>Close_WTI</th>
+      <th>Open_Gold</th>
+      <th>High_Gold</th>
+      <th>Low_Gold</th>
+      <th>Close_Gold</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2016-01-04</td>
+      <td>430.061005</td>
+      <td>434.516998</td>
+      <td>429.084015</td>
+      <td>433.091003</td>
+      <td>2.44</td>
+      <td>2.56</td>
+      <td>2.27</td>
+      <td>2.37</td>
+      <td>1063.4</td>
+      <td>1082.5</td>
+      <td>1063.2</td>
+      <td>1075.1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2016-01-05</td>
+      <td>433.069000</td>
+      <td>434.182007</td>
+      <td>429.675995</td>
+      <td>431.959991</td>
+      <td>2.33</td>
+      <td>2.35</td>
+      <td>2.13</td>
+      <td>2.21</td>
+      <td>1075.6</td>
+      <td>1081.5</td>
+      <td>1075.3</td>
+      <td>1078.4</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2016-01-06</td>
+      <td>431.855988</td>
+      <td>431.855988</td>
+      <td>426.341003</td>
+      <td>429.105011</td>
+      <td>2.14</td>
+      <td>2.16</td>
+      <td>2.10</td>
+      <td>2.12</td>
+      <td>1081.6</td>
+      <td>1093.7</td>
+      <td>1081.6</td>
+      <td>1091.9</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2016-01-07</td>
+      <td>430.010986</td>
+      <td>458.765991</td>
+      <td>429.076996</td>
+      <td>458.048004</td>
+      <td>2.03</td>
+      <td>2.08</td>
+      <td>1.93</td>
+      <td>1.93</td>
+      <td>1091.6</td>
+      <td>1109.4</td>
+      <td>1091.6</td>
+      <td>1107.7</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2016-01-08</td>
+      <td>457.537994</td>
+      <td>462.933990</td>
+      <td>447.937988</td>
+      <td>453.230011</td>
+      <td>1.99</td>
+      <td>2.01</td>
+      <td>1.90</td>
+      <td>1.93</td>
+      <td>1111.1</td>
+      <td>1111.1</td>
+      <td>1093.0</td>
+      <td>1097.8</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="verificar-datos-faltantes">
+<h3>Verificar datos faltantes<a class="headerlink" href="#verificar-datos-faltantes" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data2</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/jpdulcey/Trabajo_Final/main/Consolidado.csv&#39;</span><span class="p">,</span> <span class="p">)</span>
+<span class="n">data</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">null_counts</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 1483 entries, 0 to 1482
+Data columns (total 13 columns):
+ #   Column      Non-Null Count  Dtype  
+---  ------      --------------  -----  
+ 0   Date        1483 non-null   object 
+ 1   Open_Bit    1481 non-null   float64
+ 2   High_Bit    1481 non-null   float64
+ 3   Low_Bit     1481 non-null   float64
+ 4   Close_Bit   1481 non-null   float64
+ 5   Open_WTI    1483 non-null   float64
+ 6   High_WTI    1483 non-null   float64
+ 7   Low_WTI     1483 non-null   float64
+ 8   Close_WTI   1483 non-null   float64
+ 9   Open_Gold   1470 non-null   float64
+ 10  High_Gold   1470 non-null   float64
+ 11  Low_Gold    1470 non-null   float64
+ 12  Close_Gold  1470 non-null   float64
+dtypes: float64(12), object(1)
+memory usage: 150.7+ KB
+</pre></div>
+</div>
+</div>
+</div>
+<p>Existen datos faltantes dado que hay variables con menos de 1483 datos</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;pad&#39;</span><span class="p">)</span>
+<span class="n">data2</span><span class="o">=</span><span class="n">data2</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;pad&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Con el fin de llenar los datos nulos, se establece que sean duplicados por el valor inmediatamente superior, de esta forma los resultados
+finales de los precios de las posiciones analizadas.</p>
+</section>
+</section>
+<section id="analisis-descriptivo">
+<h2>Análisis Descriptivo<a class="headerlink" href="#analisis-descriptivo" title="Permalink to this headline">¶</a></h2>
+<section id="boxplot">
+<h3>Boxplot<a class="headerlink" href="#boxplot" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data2</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/jpdulcey/Trabajo_Final/main/Consolidado2.csv&#39;</span><span class="p">,</span> <span class="p">)</span>
+<span class="n">data2</span> <span class="o">=</span> <span class="n">data2</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span><span class="s1">&#39;na&#39;</span><span class="p">)</span>
+<span class="n">data2</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;ffill&#39;</span><span class="p">)</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">box</span><span class="p">(</span><span class="n">data2</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;Portfolio&#39;</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s1">&#39;Open&#39;</span><span class="p">,</span> <span class="n">notched</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">renderer</span><span class="o">=</span><span class="s2">&quot;svg&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/notebooks_17_0.svg" src="_images/notebooks_17_0.svg" /></div>
+</div>
+<p>Debido a la comportamiento creciente continuo del bitcoin, se registran una cantidad significativa de valores atípicos, este
+comportamiento coincide con las cifras fincieras de movimientos asencientes significativos en los precios de la criptomoneda.</p>
+</section>
+<section id="b-analisis-grafico">
+<h3>b. Análisis Gráfico<a class="headerlink" href="#b-analisis-grafico" title="Permalink to this headline">¶</a></h3>
+<p>data[‘Date’] = pd.to_datetime(data.Date, format=’%Y-%m-%d %H:%M:%S’)
+data[‘Year’] = data[‘Date’].dt.year
+data.head()</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">plotly.graph_objects</span> <span class="k">as</span> <span class="nn">go</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="p">[</span><span class="n">go</span><span class="o">.</span><span class="n">Candlestick</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">Date</span><span class="p">,</span>
+<span class="nb">open</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">Open_Bit</span><span class="p">,</span>
+<span class="n">high</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">High_Bit</span><span class="p">,</span>
+<span class="n">low</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">Low_Bit</span><span class="p">,</span>
+<span class="n">close</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">Close_Bit</span><span class="p">)</span>
+                    <span class="p">])</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span>
+<span class="n">title</span><span class="o">=</span><span class="s2">&quot;Bitcoin&quot;</span><span class="p">,</span>
+<span class="n">xaxis_title</span><span class="o">=</span><span class="s2">&quot;Day&quot;</span><span class="p">,</span>
+<span class="n">yaxis_title</span><span class="o">=</span><span class="s2">&quot;Bitcoin&quot;</span><span class="p">,</span>
+<span class="n">font</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
+<span class="n">family</span><span class="o">=</span><span class="s2">&quot;Courier New, monospace&quot;</span><span class="p">,</span>
+<span class="n">size</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span>
+<span class="n">color</span><span class="o">=</span><span class="s2">&quot;RebeccaPurple&quot;</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span><span class="n">xaxis_rangeslider_visible</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">renderer</span><span class="o">=</span><span class="s2">&quot;svg&quot;</span><span class="p">)</span>
+<span class="n">fig2</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="p">[</span><span class="n">go</span><span class="o">.</span><span class="n">Candlestick</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">Date</span><span class="p">,</span>
+<span class="nb">open</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">Open_WTI</span><span class="p">,</span>
+<span class="n">high</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">High_WTI</span><span class="p">,</span>
+<span class="n">low</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">Low_WTI</span><span class="p">,</span>
+<span class="n">close</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">Close_WTI</span><span class="p">)</span>
+                    <span class="p">])</span>
+<span class="n">fig2</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span>
+<span class="n">title</span><span class="o">=</span><span class="s2">&quot;WTI&quot;</span><span class="p">,</span>
+<span class="n">xaxis_title</span><span class="o">=</span><span class="s2">&quot;Day&quot;</span><span class="p">,</span>
+<span class="n">yaxis_title</span><span class="o">=</span><span class="s2">&quot;WTI&quot;</span><span class="p">,</span>
+<span class="n">font</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
+<span class="n">family</span><span class="o">=</span><span class="s2">&quot;Courier New, monospace&quot;</span><span class="p">,</span>
+<span class="n">size</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span>
+<span class="n">color</span><span class="o">=</span><span class="s2">&quot;RebeccaPurple&quot;</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+<span class="n">fig2</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span><span class="n">xaxis_rangeslider_visible</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">fig2</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">renderer</span><span class="o">=</span><span class="s2">&quot;svg&quot;</span><span class="p">)</span>
+<span class="n">fig3</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="p">[</span><span class="n">go</span><span class="o">.</span><span class="n">Candlestick</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">Date</span><span class="p">,</span>
+<span class="nb">open</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">Open_Gold</span><span class="p">,</span>
+<span class="n">high</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">High_Gold</span><span class="p">,</span>
+<span class="n">low</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">Low_Gold</span><span class="p">,</span>
+<span class="n">close</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">Close_Gold</span><span class="p">)</span>
+                    <span class="p">])</span>
+<span class="n">fig3</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span>
+<span class="n">title</span><span class="o">=</span><span class="s2">&quot;Gold&quot;</span><span class="p">,</span>
+<span class="n">xaxis_title</span><span class="o">=</span><span class="s2">&quot;Day&quot;</span><span class="p">,</span>
+<span class="n">yaxis_title</span><span class="o">=</span><span class="s2">&quot;Gold&quot;</span><span class="p">,</span>
+<span class="n">font</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
+<span class="n">family</span><span class="o">=</span><span class="s2">&quot;Courier New, monospace&quot;</span><span class="p">,</span>
+<span class="n">size</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span>
+<span class="n">color</span><span class="o">=</span><span class="s2">&quot;RebeccaPurple&quot;</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+<span class="n">fig3</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span><span class="n">xaxis_rangeslider_visible</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">fig3</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">renderer</span><span class="o">=</span><span class="s2">&quot;svg&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/notebooks_21_0.svg" src="_images/notebooks_21_0.svg" /><img alt="_images/notebooks_21_1.svg" src="_images/notebooks_21_1.svg" /><img alt="_images/notebooks_21_2.svg" src="_images/notebooks_21_2.svg" /><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
+</pre></div>
+</div>
+<img alt="_images/notebooks_21_4.png" src="_images/notebooks_21_4.png" />
+</div>
+</div>
+<p>Como se ha comentado anteriormente, el bitcoin presenta movimientos exponenciales crecientes, en esta misma fase los futuros del
+petróleo WTI han disminuido de forma considerable. Por otro lado, el oro se ha mantenido creciente pero de forma más mesurada que la
+criptomoneda</p>
+</section>
+<section id="c-descriptivo">
+<h3>c. Descriptivo<a class="headerlink" href="#c-descriptivo" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">round</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">describe</span><span class="p">(),</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Open_Bit</th>
+      <th>High_Bit</th>
+      <th>Low_Bit</th>
+      <th>Close_Bit</th>
+      <th>Open_WTI</th>
+      <th>High_WTI</th>
+      <th>Low_WTI</th>
+      <th>Close_WTI</th>
+      <th>Open_Gold</th>
+      <th>High_Gold</th>
+      <th>Low_Gold</th>
+      <th>Close_Gold</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>1483.0</td>
+      <td>1483.0</td>
+      <td>1483.0</td>
+      <td>1483.0</td>
+      <td>1483.0</td>
+      <td>1483.0</td>
+      <td>1483.0</td>
+      <td>1483.0</td>
+      <td>1483.0</td>
+      <td>1483.0</td>
+      <td>1483.0</td>
+      <td>1483.0</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>12300.0</td>
+      <td>12652.0</td>
+      <td>11903.0</td>
+      <td>12315.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>1450.0</td>
+      <td>1457.0</td>
+      <td>1444.0</td>
+      <td>1451.0</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>15802.0</td>
+      <td>16256.0</td>
+      <td>15240.0</td>
+      <td>15793.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>250.0</td>
+      <td>252.0</td>
+      <td>247.0</td>
+      <td>250.0</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>369.0</td>
+      <td>375.0</td>
+      <td>364.0</td>
+      <td>364.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1063.0</td>
+      <td>1082.0</td>
+      <td>1063.0</td>
+      <td>1074.0</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>2543.0</td>
+      <td>2613.0</td>
+      <td>2452.0</td>
+      <td>2534.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>1257.0</td>
+      <td>1264.0</td>
+      <td>1253.0</td>
+      <td>1257.0</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>7268.0</td>
+      <td>7446.0</td>
+      <td>7101.0</td>
+      <td>7278.0</td>
+      <td>3.0</td>
+      <td>3.0</td>
+      <td>3.0</td>
+      <td>3.0</td>
+      <td>1322.0</td>
+      <td>1327.0</td>
+      <td>1319.0</td>
+      <td>1322.0</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>10940.0</td>
+      <td>11272.0</td>
+      <td>10626.0</td>
+      <td>10928.0</td>
+      <td>5.0</td>
+      <td>5.0</td>
+      <td>4.0</td>
+      <td>5.0</td>
+      <td>1723.0</td>
+      <td>1730.0</td>
+      <td>1711.0</td>
+      <td>1722.0</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>67550.0</td>
+      <td>68790.0</td>
+      <td>66382.0</td>
+      <td>67567.0</td>
+      <td>10.0</td>
+      <td>10.0</td>
+      <td>9.0</td>
+      <td>10.0</td>
+      <td>2046.0</td>
+      <td>2063.0</td>
+      <td>2040.0</td>
+      <td>2052.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Es claro que el bitcoin presenta valores significativamente altos, dado que su balor máximo dista mucho del tercer cuartil; las otras dos
+variables tienen un comportamiento similar, pero la diferencia es mucho menor.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="intro.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Modelo predictivo para el bitcoin basado en dos variables con alto respaldo financiero.</p>
+        </div>
+    </a>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          Por The Jupyter Book Community<br/>
+        
+            &copy; Derechos de autor 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
