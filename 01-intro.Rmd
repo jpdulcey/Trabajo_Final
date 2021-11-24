@@ -1,0 +1,16 @@
+# Introducción 
+En estados unidos las elecciones de congresistas se hacen en distritos uninominales con la misma población. Estos distritos son diseñados cada diez años según la población de cada estado. Este censo se llevo acabo en el 2020. Por lo que los distritos están por reajustarse. Este reajuste se puede hacer siguiendo distintos criterios. El blog fivethirtyeight define ocho maneras que esto se puede hacer:
+
+“1.Los límites actuales del Congreso
+Hicimos cada uno de los otros siete con un objetivo diferente en mente:
+2. Distritos de Gerrymander para favorecer a los republicanos
+3. Distritos de Gerrymander para favorecer a los demócratas
+4. Emparejar el desglose de los escaños por parte de los partidos con el electorado
+5. Promover elecciones altamente competitivas
+6. Maximizar el número de distritos mayoritarios y minoritarios
+7.Hacer que las formas de los distritos sean compactas (usando un algoritmo)
+8.Hacer que los distritos sean compactos respetando las fronteras del condado.” 
+
+Cabe definir Gerrymander como diseñar un distrito que favorezca explícitamente a un partido político.  Esto se puede evaluar teniendo en cuenta la cantidad de votos depreciados por partido político, la probabilidad de cada partido, la composición racial y los limites territoriales.
+
+

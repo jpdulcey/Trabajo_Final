@@ -1,0 +1,115 @@
+# Cross-references {#cross}
+
+# Analisis Exploratorio 
+Cargamos librerias
+```{r warning=FALSE}
+library(tidyverse)
+library(ggplot2)
+library(dplyr)
+library(readr)
+```
+Cargamos datos de _Fivethirtyeight_
+```{r message=FALSE, warning=FALSE, include=FALSE}
+states <- read_csv("https://raw.githubusercontent.com/jpdulcey/Trabajo_Final/main/states.csv")
+districts <- read_csv("https://raw.githubusercontent.com/jpdulcey/Trabajo_Final/main/districts.csv")
+```
+Unimos las base de datos por lo que tenemos 
+```{r}
+dt<-merge(x = districts, y = states, by = "state")
+```
+Quitamos columnas no importantes
+```{r}
+dt <- select(dt,-c(statefp.x, maptype.x, current_map,impossible,statefp.y))
+dt$compactness_rank<-as.character(dt$compactness_rank)
+```
+
+```{r}
+states %>%
+  filter(!is.na(compactness_rank)) %>% 
+ggplot(aes(compactness_rank,fill=maptype))+
+  geom_bar()+labs(title = "Ranking de nivel de compacto de los distritos",x="Ranking",
+                  y="Cantitad",fill="Tipo de mapa")+scale_fill_viridis_d(option = "D")+
+  theme_minimal()
+```
+Si miramos lo compacto de nuestros distritos a medida que aumenta el ranking (dismuyendo su nivel de compacto) podemos concluir esto favorece a los republicanos y a los democratas le sirve uno rango medio en el ranking.
+
+```{r}
+states %>%
+  filter(!is.na(efficiency_gap_extra_seats)) %>% 
+ggplot(aes(efficiency_gap_extra_seats,fill=maptype))+
+  geom_bar()+labs(title = "Ranking de nivel de compacto de los distritos",x="Ranking",
+                  y="Cantitad",fill="Tipo de mapa")+scale_fill_viridis_d(option = "D")+
+  theme_minimal()
+```
+
+```{r}
+districts %>%
+  filter(!is.na(minority_chance)) %>% 
+ggplot(aes(y=minority_chance,x=maptype,fill=maptype))+
+  geom_boxplot(scale = "area")+labs(title = "Probablidad de la minoria",x="Tipo de mapa", y="Porcentaje de la minoria")+scale_fill_viridis_d(option = "D")+
+  guides(fill=FALSE,x =  guide_axis(angle = 10))+
+  theme_minimal()
+  
+```
+
+Podemos concluir que la probablidad de la minoria amuenta cuando los mapas son trazados a favor de una mejor relacion mayoria-minoria. El Partido democrata es el mas favorecido cuando la probablidad  de la minoria aumenta.
+```{r}
+states %>%
+  filter(!is.na(county_splits)) %>% 
+ggplot(aes(y=county_splits,x=maptype,fill=maptype))+
+  geom_boxplot(scale = "area")+labs(title = "Cantidad de divisiones de los condados",x="Tipo de mapa", y="cantidad de divisiones")+scale_fill_viridis_d(option = "D")+
+  guides(fill=FALSE,x =  guide_axis(angle = 10))+
+  theme_minimal()
+```
+
+Cuando observamos la cantidad de veces que se divide un condado el tipo de mapa con mayores divisiones es el diseño con logaritmo para ser compacto y que menos divisiones el más compacto.
+
+```{r}
+states %>%
+  filter(!is.na(district_perimeters)) %>% 
+ggplot(aes(y=district_perimeters,x=maptype,fill=maptype))+
+  geom_boxplot(scale = "area")+
+  labs(title = "Perimetro del distrito",x="Tipo de mapa", y="Perimentro")+scale_fill_viridis_d(option = "D")+
+  guides(fill=FALSE,x =  guide_axis(angle = 10))+
+  theme_minimal()
+```
+
+Si observamos el perimetro del distrito ningun tipo de mapa se ve mas favoricido.
+# Mapas
+Estos son los mapas que se van a graficar con shiny se hablitara la opción de escoger que variable se desea observar.
+Librerias 
+
+```{r}
+library(usmap)
+library(ggplot2)
+library(shapefiles)
+library(maptools)
+dt_current<-dt %>% filter(maptype.y=="current") 
+dt_current<-dt %>% filter(maptype.y=="current")
+```
+
+
+```{r}
+plot_usmap(data = dt_current, values = "efficiency_gap", color = "black") + 
+ scale_fill_viridis_c()+ labs(title = "Brecha de eficacia en la eleccion",fill="Eficencia")
+  theme(legend.position = "right")
+```
+
+```{r}
+plot_usmap(data = dt_current, values = "dem_chance", color = "black") + 
+  scale_fill_continuous(name = "Chance de lo democratas", label = scales::comma) + 
+  theme(legend.position = "right")
+```
+
+```{r}
+plot_usmap(data = dt_current, values = "PVI", color = "black") + 
+  scale_fill_continuous(name = "Indice partisano", label = scales::comma) + 
+  theme(legend.position = "right")
+```
+
+```{r}
+plot_usmap(data = dt_current, values = "compactness_rank", color = "black") + 
+  scale_fill_discrete(name="Compacto")+
+  theme(legend.position = "right")
+``` 
+

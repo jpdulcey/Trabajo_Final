@@ -1,0 +1,6 @@
+# Referencias
+https://fivethirtyeight.com/features/we-drew-2568-congressional-districts-by-hand-heres-how/
+https://projects.fivethirtyeight.com/redistricting-maps/
+https://github.com/fivethirtyeight/redistricting-atlas-data
+
+
